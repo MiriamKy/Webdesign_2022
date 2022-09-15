@@ -16,7 +16,8 @@ og dette gjør at href-attributten leses som om den ikke slutter før neste fnut
     FØLGEFEIL 10: ERROR "Bad value for attribute href on element link: Illegal character in path segment: > is not allowed."
     FØLGEFEIL 11: ERROR "Attribute #" not allowed on element link at this point."
     FØLGEFEIL 12: ERROR "Stray end tag a."
-    FØLGEFEIL 13 ERROR "No li element in scope but a li end tag seen."-->
+    FØLGEFEIL 13 ERROR "No li element in scope but a li end tag seen."
+    FØLGEFEIL 16: ERROR "Stray end tag nav."-->
         <title>Web eksamen del 1</title>
     </head>
 <!--4: ERROR Head lå inne i body, og validatoren leste den som bortkommen/"stray". Head skal være før body og ikke inni. Jeg flyttet derfor head-en ut av body og plasserte den rett over.
@@ -25,16 +26,16 @@ og dette gjør at href-attributten leses som om den ikke slutter før neste fnut
     <body>
         <nav>
             <h2>Logo</h2>
-<!--17: WARNING: Validatoren oppdaget et h1-element for andre gang i filen (lenger ned under header), noe som ikke er særlig praktisk, siden alle h1-elementer blir sett på som like viktige
+<!--17, 18 og 21: WARNING: Validatoren oppdaget et h1-element flere ganger i filen (lenger ned under header, og i de 3 artiklene), noe som ikke er særlig praktisk, siden alle h1-elementer blir sett på som like viktige
     av opplesningsverktøy og søkemotorer. Derfor skal det kun være ett h1-element i hvær fil. Jeg velger heller å gjøre om det første h1-elementet til h2,
-    da "Logo" ikke sier så mye om innholdet på siden, som det neste overskrift gjør.-->         
+    da "Logo" ikke sier så mye om innholdet på siden, som det neste overskrift gjør (lar derfor den stå som h1). Overskriftene i de 3 artiklene gjør jeg til h3, fordi de er på 3. plass i viktighet. Kommentert der det gjelder.-->         
             <ul>
                 <li> <a href="#">Boatswain schooner</a></li>
                 <li> <a href="#">Account lookout</a></li>
                 <li> <a href="#">Sail ho shrouds</a></li>
             </ul>
         </nav>
-<!--15 og 16: ERROR "Element li not allowed as child of element body in this context."
+<!--14 og 15: ERROR "Element li not allowed as child of element body in this context."
     Validatoren sier at li ikke kan være barneelement av body alene. Listen må bli definert/pakket inn som organisert eller uorganisert liste.
     Her har ikke rekkefølgen på listen noe å si, så jeg la til en ul rundt listepunktene.-->
         <header>
@@ -42,22 +43,29 @@ og dette gjør at href-attributten leses som om den ikke slutter før neste fnut
             <p>Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl.</p>
             <a class="button">Les mer</a>
         </header>
-            <div id="main">
+            <main>
+<!--Tilleggsfeil 1: Endret fra <div id=main> til bare main, fordi main ikke er en id-selektor i css-arket. Derfor kobles main nå direkte til main i css-arket-->
                 <article>
-                    <h1>Prow scuttle</h1>
+                    <h3>Prow scuttle</h3>
+<!---17, 18 og 21: WARNING: Gjort om fra h1 til h3, se forklaring over-->
                     <p>Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors.</p>
                     <a href="#">Les mer</a>
+                </article>
+<!--20: ERROR: Validaroten oppdaget at denne artikkelen ikke hadde blitt lukket av en end tag, det neste som skjedde var bare at en ny atrikkel begynte, så jeg la til en end tag
+    FØLGEFEIL 19: ERROR: "End tag div seen, but there were open elements."-->
                 <article>
-                    <h1>Jack Tar transom</h1>
+                    <h3>Jack Tar transom</h3>
+<!---17, 18 og 21: WARNING: Gjort om fra h1 til h3, se forklaring over-->                   
                     <p>Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors.</p>
                     <a href="#">Les mer</a>
                 </article>
                 <article>
-                    <h1>Trysail Sail</h1>
+                    <h3>Trysail Sail</h3>
+<!---17, 18 og 21: WARNING: Gjort om fra h1 til h3, se forklaring over-->                    
                     <p>Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors.</p>
                     <a href="#">Les mer</a>
                 </article>
-            </div>
+            </main>
         <footer>
             <span>Twitter</span>
             <span>Facebook</span>
