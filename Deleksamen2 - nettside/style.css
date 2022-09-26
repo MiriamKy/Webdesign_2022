@@ -1,8 +1,45 @@
-body{
-    background-color: rgb(172, 155, 143);
+/* Fargepallett */
+
+:root{
+    --hvit: rgb(255, 246, 238);
+    --beige: rgb(172, 155, 143);
+    --brun: rgb(111, 71, 46);
+    --sort: rgb(15, 14, 13);
 }
 
-#grid-container{
+
+
+/* Klasser (legge inn fonter her senere?? */
+
+.hvit-bakgrunn{
+    color: var(--brun);
+    background-color: var(--hvit)
+}
+
+.lys-bakgrunn{
+    color: var(--hvit);
+    background-color: var(--beige)
+}
+
+.brun-bakgrunn{
+    color: var(--hvit);
+    background-color: var(--brun)
+}
+
+.mørk-bakgrunn{
+    color: var(--hvit);
+    background-color: var(--sort)
+}
+
+
+
+/* Gjelder for hele siden */
+
+body{
+    margin: 0;
+}
+
+#grid{
     display: grid;
     grid-template-areas:"header" 
                         "main"
@@ -11,28 +48,61 @@ body{
     grid-template-columns: 1fr;
 }
 
+
+
+/* Header */
+
 header{
     grid-area: header;
-    
 }
 
-#nav{
-    overflow: auto;
-    background-color: #ffffff;
-    padding: 2rem;
-    display: flex-end;
+header nav{
     align-items: baseline;
+    justify-content: center;
     justify-content: space-between;
 }
 
 
+/* Header - logo */
+
+#logo{
+    justify-content: left;
+    padding-left: 30px;
+}
+
+
+
+/* Header - meny */
+
+#meny{
+    position: absolute;
+    top:125px;
+    left:0;
+    width: 100%;
+    padding: 1rem;
+}
+
+ul li{
+    list-style: none;
+}
+
+ul a{
+    padding: 1rem;
+    display: inline-block;
+    font-size: 20px;
+}
+
+
+
+/* Hovedområde */
 
 main{
-    grid-area: main;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+
 }
+
+
+
+/* Footer */
 
 footer{
     grid-area: footer;
