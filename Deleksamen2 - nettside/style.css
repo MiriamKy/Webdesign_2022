@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(172, 155, 143);
+}
+
+#grid-container{
+    display: grid;
+    grid-template-areas:"header" 
+                        "main"
+                        "aside" 
+                        "footer";
+    grid-template-columns: 1fr;
+}
+
+header{
+    grid-area: header;
+    
+}
+
+#nav{
+    overflow: auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    display: flex-end;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+
+
+main{
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+footer{
+    grid-area: footer;
+}
