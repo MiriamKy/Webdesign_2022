@@ -69,14 +69,13 @@ Mulig jeg trenger dem, så jeg ville ikke slette de ubrukte ennå */
 #logo {
     display:block;
     height: 40px;
-    padding-left: 10px;
+    padding-left: 20px;
     padding-top: 15px;
 
 }
 
 nav {
     display:flex;
-    flex-wrap:wrap;
     justify-content:space-between;
     align-items:baseline;
     width:100%;
@@ -89,7 +88,7 @@ nav ul {
     display:flex;
     list-style:none;
     gap: 15px;
-    padding-right: 10px;
+    padding-right: 20px;
 }
 
 nav ul li a {
