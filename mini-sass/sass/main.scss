@@ -1,0 +1,27 @@
+@import 'variables.scss';
+
+@mixin box-design($backC, $maxW, $wid, $marg) {
+    background-color: $backC;
+    max-width: $maxW;
+    width: $wid;
+    margin: $marg;
+}
+
+header{
+    background-color:$bakgrunnsfarge;
+    padding: 1rem;
+
+    h1{
+        color:$tekstfarge;
+        text-align: center;
+
+        &:hover{
+            color:$hoverfarge;
+        }
+    }
+}
+
+main {
+    @include box-design(rgb(255, 235, 169), 600px, 100%, 0 auto);
+    height: 300px;
+}

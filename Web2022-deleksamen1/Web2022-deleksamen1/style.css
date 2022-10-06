@@ -12,26 +12,27 @@
 
   nav{
       display:flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      align-items: baseline;
-      padding: 1rem 7rem;
+      justify-content: space-between; /* Bestemmer at nav og ul får rom mellom seg */
+      flex-wrap: wrap; /* Gjør at logoen og listepunktene kommer under hvarandre når siden blir mindre, at de ikke er tvunget til å være på linje alltid */
+      align-items: baseline; /* Gjør at elementene inne i nav kommer på linje */
+      padding: 1rem 7rem; /* Bestemmer rom rundt nav-elementet */
   }
 
   nav ul{
       list-style: none;
-      display:flex;
-      gap:1rem;
-      flex-wrap: wrap;
+      display:flex; /* Bestemmer er at listepunktene kommer ved siden av hverandre. De kommer under hverandre på mobil */
+      gap: 2rem; /* Bestemmer mellomrommet mellom listepunktene */
+      flex-wrap: wrap; /* Trenger en slik her også, for at listepunktene skal kunne komme under hverandre, hvis ikke vil ikke siden være mobilvennlig */
       padding: 0%;
       margin: 0;
   }
 
   nav ul li a{
     text-decoration: none;
-    color: #861269;
-    font-weight: 900;
-    text-transform: uppercase;
+    color: #861269; /* Farge på teksten */
+    font-weight: 900; /* Manipulerer hvor fet teksten er */
+    text-transform: uppercase; /* Bestemmer at teksten skal være bare store bokstaver */
+    letter-spacing: 0.2em /* Bestemmer mellomrom mellom bokstaver i listepunktene */
   }
 
   nav ul li a:hover{
@@ -39,13 +40,13 @@
 }
 
   header{
-        background: rgb(255,199,227);
-        background: linear-gradient(249deg, rgba(255,199,227,1) 0%, rgba(211,249,255,1) 100%);
-        height: 60vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 7rem;
+        background: rgb(255,199,227); /* Denne bakgrunnsfargen er ikke aktiv fordi det kommer en ny under her */
+        background: linear-gradient(249deg, rgba(255,199,227,1) 0%, rgba(211,249,255,1) 100%); /* Lager bakgrunnsfarge som går fra en farge til en annen */
+        height: 60vh; /* Setter en høyde på header, som er konstant??*/
+        display: flex; /* Gjør at teksten faller under hverandre når det ikke er plass til den */
+        flex-direction: column; /* Gjør at midtstillingen på neste linje blir vertikal og ikke horisontal, som sikkert er standard*/
+        justify-content: center; /* Gjør at teksten blir midtstilt i headeren */
+        padding: 7rem; /* Gjør at teksten får luft rundt seg og ikke blir klyst inntil venstre */
   }
 
   header p{
@@ -55,8 +56,8 @@
   }
 
   .button{
-      display: inline-block;
-      background-color: rgb(63, 63, 63);
+      display: inline-block; /* Samme som inline, men denne respekterer elementets top- og bunn-margin og padding */
+      background-color: rgb(123, 175, 214);
       color: #fff;
       padding: 0.5rem;
       width: 100px;
@@ -65,14 +66,14 @@
   }
 
   main{
-    display: flex;
+    display: flex; /* Gjør at artiklene legger seg ved siden av hverandre så lenge det er plass, mobilvennlig */
     padding: 10rem 5rem;
     gap: 4rem;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Gjør at artiklene legger seg under hverandre når det ikke er plass, mobilvennlig*/
     justify-content: space-between;
   }
   main article{
-      flex-basis: 25%;
+     flex-basis: 25%;
      min-width: 200px;
      padding: 2rem;
      border-radius: 10px;

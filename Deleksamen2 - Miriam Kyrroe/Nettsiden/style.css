@@ -1,0 +1,192 @@
+/* Fargepallett */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --hvit: rgb(255, 246, 238);
+    --beige: rgb(172, 155, 143);
+    --brun: rgb(104, 88, 78);
+    --sort: rgb(15, 14, 13);
+}
+
+/* Klasser */
+/* Ikke alle disse klassene er brukt; men jeg laget dem for å se hvordan lauouten utviklet jeg da jeg jobbet med grid.
+Mulig jeg trenger dem, så jeg ville ikke slette de ubrukte ennå */
+
+.hvit-bakgrunn {
+    color: var(--brun);
+    background-color: var(--hvit)
+}
+
+.lys-bakgrunn {
+    color: var(--hvit);
+    background-color: var(--beige)
+}
+
+.brun-bakgrunn {
+    color: var(--hvit);
+    background-color: var(--brun)
+}
+
+.mørk-bakgrunn {
+    color: var(--hvit);
+    background-color: var(--sort)
+}
+
+/* Oppsett for siden */
+
+#grid {
+    display:grid;
+    color:white;
+    grid-template-columns: 1fr;
+    grid-template-areas:"nav"
+                        "head"
+                        "main"
+                        "foot"
+
+}
+
+#grid > nav {
+    grid-area: nav;
+}
+
+#grid > header {
+    grid-area: head;
+}
+
+#grid > main {
+    grid-area: main;
+}
+
+#grid > footer {
+    grid-area: foot;
+}
+
+/* Nav */
+
+#logo {
+    display:block;
+    height: 40px;
+    padding-left: 10px;
+    padding-top: 15px;
+
+}
+
+nav {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:baseline;
+    width:100%;
+    position:fixed;
+    height: 70px;
+}
+
+
+nav ul {
+    display:flex;
+    list-style:none;
+    gap: 15px;
+    padding-right: 10px;
+}
+
+nav ul li a {
+    color:white;
+    text-decoration:none;
+    flex-wrap:wrap;
+}
+
+nav ul li a:hover {
+    text-decoration:overline;
+
+}
+
+/* Header */
+
+header {
+    display:flex;
+    justify-content:space-between;
+    padding-top:70px;
+}
+
+header h1 {
+    display:block;
+    z-index: -1;
+    padding:5rem 3rem;
+}
+
+#bakgrunn {
+    position:fixed;
+    z-index:-2;
+}
+
+#figur {
+    padding-top:50px;
+}
+
+/*Hovedområde*/
+
+article img {
+    max-width: 300px;
+    height:auto;
+}
+
+article div {
+    display:block;
+    max-width: 200px;
+
+}
+
+#artikkel1 {
+    display:flex;
+    align-items:center;
+    gap:2rem;
+    width:100%;
+    justify-content:left;
+    padding:1rem;
+    
+}
+
+#artikkel2 {
+    display:flex;
+    align-items:center;
+    gap:2rem;
+    width:100%;
+    justify-content:center;
+    padding:1rem;
+    
+}
+
+#artikkel3 {
+    display:flex;
+    align-items:center;
+    text-align:right;
+    gap:2rem;
+    width:100%;
+    justify-content:right;
+    padding:1rem;
+    
+}
+
+
+
+/* Footer */
+
+footer {
+    height: 70px
+}
+
+footer ul {
+    display: flex;
+    list-style:none;
+    justify-content:center;
+    padding: 1rem;
+}
+
+footer ul li {
+    display:inline;
+    padding: 10px;
+}
+
