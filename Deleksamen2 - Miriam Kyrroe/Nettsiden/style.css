@@ -66,14 +66,6 @@ Mulig jeg trenger dem, så jeg ville ikke slette de ubrukte ennå */
 
 /* Nav */
 
-#logo {
-    display:block;
-    height: 40px;
-    padding-left: 20px;
-    padding-top: 15px;
-
-}
-
 nav {
     display:flex;
     justify-content:space-between;
@@ -99,6 +91,14 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration:overline;
+
+}
+
+#logo {
+    display:block;
+    height: 40px;
+    padding-left: 20px;
+    padding-top: 15px;
 
 }
 
@@ -145,7 +145,16 @@ article div {
     width:100%;
     justify-content:left;
     padding:1rem;
-    
+}
+
+/* Her må jeg få klassen til å fungere */
+#knapp {
+    display: block;
+    position: fixed;
+    justify-content: left;
+    padding: 1em;
+    background-color: --brun;
+    color: --hvit;
 }
 
 #artikkel2 {
@@ -155,7 +164,6 @@ article div {
     width:100%;
     justify-content:center;
     padding:1rem;
-    
 }
 
 #artikkel3 {
@@ -166,7 +174,6 @@ article div {
     width:100%;
     justify-content:right;
     padding:1rem;
-    
 }
 
 
