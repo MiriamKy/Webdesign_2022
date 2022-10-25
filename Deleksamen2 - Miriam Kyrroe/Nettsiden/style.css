@@ -11,35 +11,8 @@
     --sort: rgb(15, 14, 13);
 }
 
-/* Klasser */
-/* Ikke alle disse klassene er brukt; men jeg laget dem for å se hvordan lauouten utviklet jeg da jeg jobbet med grid.
-Mulig jeg trenger dem, så jeg ville ikke slette de ubrukte ennå */
-
-.hvit-bakgrunn {
-    color: var(--brun);
-    background-color: var(--hvit)
-}
-
-.lys-bakgrunn {
-    color: var(--hvit);
-    background-color: var(--beige)
-}
-
-.brun-bakgrunn {
-    color: var(--hvit);
-    background-color: var(--brun)
-}
-
-.mørk-bakgrunn {
-    color: var(--hvit);
-    background-color: var(--sort)
-}
-
-/* Oppsett for siden */
-
 #grid {
     display:grid;
-    color:white;
     grid-template-columns: 1fr;
     grid-template-areas:"nav"
                         "head"
@@ -68,131 +41,84 @@ Mulig jeg trenger dem, så jeg ville ikke slette de ubrukte ennå */
 
 nav {
     display:flex;
-    justify-content:space-between;
-    align-items:baseline;
-    width:100%;
-    position:fixed;
-    height: 70px;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
 }
 
-
 nav ul {
-    display:flex;
-    list-style:none;
-    gap: 15px;
-    padding-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 2rem;
 }
 
 nav ul li a {
-    color:white;
-    text-decoration:none;
-    flex-wrap:wrap;
+    color: white;
+    text-decoration: none;
+    margin: 1rem;
 }
 
 nav ul li a:hover {
-    text-decoration:overline;
 
 }
 
 #logo {
-    display:block;
     height: 40px;
-    padding-left: 20px;
-    padding-top: 15px;
-
+    margin: 2em;
 }
 
 /* Header */
 
 header {
-    display:flex;
-    justify-content:space-between;
-    padding-top:70px;
 }
 
 header h1 {
-    display:block;
-    z-index: -1;
-    padding:5rem 3rem;
 }
 
 #bakgrunn {
-    position:fixed;
-    z-index:-2;
 }
-
-#figur {
-    padding-top:50px;
-}
-
 /*Hovedområde*/
 
+main {
+
+
+}
+
+main div {
+
+}
+
+article {
+
+}
+
 article img {
-    max-width: 300px;
-    height:auto;
+
 }
 
 article div {
-    display:block;
-    max-width: 200px;
+
 
 }
 
-#artikkel1 {
-    display:flex;
-    align-items:center;
-    gap:2rem;
-    width:100%;
-    justify-content:left;
-    padding:1rem;
-}
-
-/* Her må jeg få klassen til å fungere */
+/*Her må jeg få klassen til å fungere*/
 #knapp {
-    display: block;
-    position: fixed;
-    justify-content: left;
-    padding: 1em;
-    background-color: --brun;
-    color: --hvit;
-}
 
-#artikkel2 {
-    display:flex;
-    align-items:center;
-    gap:2rem;
-    width:100%;
-    justify-content:center;
-    padding:1rem;
 }
-
-#artikkel3 {
-    display:flex;
-    align-items:center;
-    text-align:right;
-    gap:2rem;
-    width:100%;
-    justify-content:right;
-    padding:1rem;
-}
-
 
 
 /* Footer */
 
 footer {
-    height: 70px
+
 }
 
 footer ul {
-    display: flex;
-    list-style:none;
-    justify-content:center;
-    padding: 1rem;
+
 }
 
 footer ul li {
-    display:inline;
-    padding: 10px;
+
 }
 
