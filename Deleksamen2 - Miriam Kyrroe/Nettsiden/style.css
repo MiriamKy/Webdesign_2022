@@ -218,6 +218,88 @@ div main section ul {
     padding-left: 3rem;
     padding-bottom: 2rem;
 }
+
+.tabell {
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-areas:"rader kolonner";
+    padding: 0;
+    gap: 0;
+    width: 100%;
+}
+
+.tabell2 {
+    display: none;
+}
+
+#tabell > header {
+    grid-area: rader;
+}
+
+#tabell > main {
+    grid-area: kolonner;
+}
+
+.kolonne {
+    display: flex;
+    column-gap: 10px;
+}
+
+.rad {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.kategori-spread {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding-bottom: 2rem;
+}
+
+
+.gjemt-media {
+    display: hidden;
+}
+
+.tittel {
+    color: white;
+    width: 100%;
+    min-width: 70px;
+    max-height: 18px;
+    background-color: rgb(200, 85, 112);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 8px 20px;
+}
+
+.kategori {
+    color: white;
+    width: 100%;
+    max-width: 100px;
+    min-width: 50px;
+    background-color: rgb(200, 85, 112);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 8px 20px;
+}
+
+.innhold {
+    color: rgb(0, 0, 0);
+    width: 100%;
+    background-color: rgb(255, 230, 222);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 8px 20px;
+}
+
 /* Footer */
 
 footer {
@@ -238,6 +320,27 @@ footer ul {
 
 footer ul li {
     color:rgb(255, 246, 238);
+}
+
+@media (max-width: 1000px) {
+
+    .tabell {
+        display: none;
+    }
+    
+    .tabell2 {
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-template-areas:"rader kolonner";
+        padding: 0;
+        gap: 0;
+        width: 100%;
+    }
+
+    .kolonne {
+        flex-wrap: wrap;
+    }
+
 }
 
 @media (max-width: 850px) {
